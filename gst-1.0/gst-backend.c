@@ -55,7 +55,7 @@ static gint    g_buffer_size = 0;
 static StrPair_t **g_ptr_http_header_fields = NULL;
 static int  g_sfd = -1;     /* Used to wake up main loop when new message in the gst bus is available */
 static int g_fileFd = -1;
-static guint64 g_iptv_download_timeout = 5000;
+static guint64 g_iptv_download_timeout = 0;
 static gboolean g_is_live = TRUE;
 
 static struct
