@@ -826,7 +826,7 @@ int backend_query_position(int64_t *mseconds)
         */
         if ( g_dvbAudioSink || g_dvbVideoSink)
         {
-            g_signal_emit_by_name(g_dvbAudioSink?g_dvbAudioSink:g_dvbVideoSink, "get-decoder-time", &decoder_time);
+            g_signal_emit_by_name(g_dvbVideoSink?g_dvbVideoSink:g_dvbAudioSink, "get-decoder-time", &decoder_time);
             /* EOS fix start */
             gint64 timestamp = getTimestamp();
             if(0 == g_eos_fix.check_timestamp) g_eos_fix.check_timestamp = timestamp;
