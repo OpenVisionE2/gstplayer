@@ -835,7 +835,7 @@ int backend_query_position(int64_t *mseconds)
             if(decoder_time  == g_eos_fix.decoder_time && 
                playbin_time  == g_eos_fix.playbin_time )
             {
-                if(3000 < (timestamp-g_eos_fix.check_timestamp) )
+                if(10000 < (timestamp-g_eos_fix.check_timestamp) )
                 {
                     backend_stop();
                 }
